@@ -302,22 +302,24 @@ class Jobs extends Component {
     // console.log(activeCategoryId)
 
     return (
-      <div className="all-products-section">
+      <div>
         <Header />
-        <FiltersGroup
-          renderProfile={this.renderProfile}
-          searchInput={searchInput}
-          employmentTypesList={employmentTypesList}
-          salaryRangesList={salaryRangesList}
-          changeSearchInput={this.changeSearchInput}
-          enterSearchInput={this.enterSearchInput}
-          activeCategoryId={activeCategoryId}
-          activeRatingId={activeRatingId}
-          changeCategory={this.changeCategory}
-          changeRating={this.changeRating}
-          clearFilters={this.clearFilters}
-        />
-        {this.renderAllProducts()}
+        <div className="all-products-section">
+          <FiltersGroup
+            renderProfile={this.renderProfile}
+            searchInput={searchInput}
+            employmentTypesList={employmentTypesList}
+            salaryRangesList={salaryRangesList}
+            changeSearchInput={this.changeSearchInput}
+            enterSearchInput={this.enterSearchInput}
+            activeCategoryId={activeCategoryId}
+            activeRatingId={activeRatingId}
+            changeCategory={this.changeCategory}
+            changeRating={this.changeRating}
+            clearFilters={this.clearFilters}
+          />
+          {this.renderAllProducts()}
+        </div>
       </div>
     )
   }
